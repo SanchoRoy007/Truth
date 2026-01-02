@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>For Nan ❤️</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Happy New Year Nan ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1 id="title">Hey Nan 🌙</h1>
-    <p id="text">I made something for you.</p>
+<!-- SCREEN 1 : WELCOME -->
+<section class="screen active" id="screen1">
+  <h1>Happy New Year, Nan 🤍</h1>
+  <p>
+    Not love. Not friendship.<br>
+    Eta onno ekta level.
+  </p>
+  <button onclick="goTo('screen2')">Enter Our World</button>
+</section>
 
-    <button id="nextBtn">Continue</button>
+<!-- SCREEN 2 : STORY -->
+<section class="screen" id="screen2">
+  <h2>Amader Prem</h2>
+  <p>
+    Chup kore hata,<br>
+    Google Meet-er nishobdo call,<br>
+    ek earphone dui jon-er kaane,<br>
+    jhogra o jotno — shob miley amra.
+  </p>
+  <button onclick="goTo('screen3')">Our Memories</button>
+</section>
 
-    <div id="choices" class="hidden">
-        <p class="question">Will you stay with me? 💖</p>
-        <button onclick="yesClicked()">Yes ❤️</button>
-        <button id="noBtn">No 💔</button>
-    </div>
-</div>
+<!-- SCREEN 3 : MEMORIES -->
+<section class="screen" id="screen3">
+  <h2>Old Memories 🤍</h2>
 
-<div class="hearts"></div>
+  <div class="memory-grid">
+    <div class="card"><div class="inner"><div class="front">Memory 1</div><div class="back"><img src="pic1.png"></div></div></div>
+    <div class="card"><div class="inner"><div class="front">Memory 2</div><div class="back"><img src="pic2.png"></div></div></div>
+    <div class="card"><div class="inner"><div class="front">Memory 3</div><div class="back"><img src="pic3.png"></div></div></div>
+    <div class="card"><div class="inner"><div class="front">Memory 4</div><div class="back"><img src="pic4.png"></div></div></div>
+  </div>
+
+  <button onclick="goTo('screen4')">A Small Game 🤍</button>
+</section>
+
+<!-- SCREEN 4 : LOVE GAME -->
+<section class="screen" id="screen4">
+  <h2>The Love Test 💗</h2>
+  <p id="gameText">Click the heart as many times as you can in 5 seconds.</p>
+  <div id="heartGame" onclick="increaseLove()">❤</div>
+  <p id="score">Love Count: 0</p>
+  <button onclick="startGame()">Start Game</button>
+  <button onclick="goTo('screen5')">Final Words</button>
+</section>
+
+<!-- SCREEN 5 : END -->
+<section class="screen" id="screen5">
+  <h2>For You, Nan 🤍</h2>
+  <p class="final-text">
+    Definition of love is not lust<br>
+    “It is when both see each other and blush”<br><br>
+    
+  </p>
+  <footer>
+    Made for Nan with love, quarrels & care — always yours.
+  </footer>
+</section>
 
 <script src="script.js"></script>
 </body>
